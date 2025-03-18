@@ -1,0 +1,123 @@
+body {
+  background: linear-gradient(to bottom right, #6ec6ff, #4dabf5);
+  min-height: 100vh;
+}
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  transition: all 0.3s;
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+.btn-success {
+  background-color: #28a745;
+  border: none;
+}
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.navbar {
+  background-color: #37ccfd !important;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.home-content {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.home-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.home-subtitle {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.home-button {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.home-button:hover {
+  background-color: #ffffff;
+  color: #007bff;
+}
+
+/* Buat tabel tetap bisa di-scroll horizontal */
+.table-responsive {
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  table.table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  /* Sembunyikan header tabel di layar kecil */
+  table.table thead {
+    display: none;
+  }
+
+  /* Tampilkan setiap baris sebagai blok */
+  table.table tbody tr {
+    display: block;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  /* Tampilkan setiap sel dalam satu baris */
+  table.table tbody td {
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    padding: 5px;
+    position: relative;
+  }
+
+  /* Tambahkan label sebelum isi */
+  table.table tbody td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    float: left;
+    text-transform: capitalize;
+  }
+
+  table.table tbody td.action-column {
+    text-align: center;
+  }
+}

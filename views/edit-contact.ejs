@@ -1,0 +1,67 @@
+<!-- <link rel="stylesheet" href="/css/style.css" /> -->
+
+<div class="container mt-3">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Form To Edit Contact Data</h2>
+        <% if (typeof errors != 'undefined') { %>
+        <div class="alert alert-danger" role="alert">
+          <ul>
+            <% errors.forEach(error => { %>
+            <li><%= error.msg %></li>
+            <% }) %>
+          </ul>
+        </div>
+          <% } %>
+  
+          <form method="post" action="/contact/update">
+            <input type="hidden" name="oldName" value="<%= contact.oldName || contact.name  %>">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                required value="<%= contact.name  %>"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="nohp" class="form-label">No HP</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nohp"
+                name="nohp"
+                required value="<%= contact.nohp  %>"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="nickname" class="form-label">Nickname</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nickname"
+                name="nickname"
+                required value="<%= contact.nickname  %>"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                required value="<%= contact.email  %>"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Edit Data Contact
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
